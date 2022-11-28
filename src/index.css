@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply h-full;
+  }
   body {
-    @apply bg-gray-800;
+    @apply bg-white;
+    @apply h-full;
+  }
+  .root {
+    @apply h-full;
+    font-size: 62.5%;
   }
 }
+
+/* .root {
+  font-size: 62.5%;
+} */
