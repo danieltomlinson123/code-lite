@@ -16,7 +16,7 @@ const Login: FC = () => {
           <h1 className="text-4xl text-black-600 font-semibold">VINCI</h1><span className="text-xs text-vinci-light mt-1 ml-0.5 font-semibold">BETA</span>
         </div>
         <form
-          className="flex flex-col mt-12 space-y-6 "
+          className="flex flex-col mt-12"
           onSubmit={async (e) => {
             e.preventDefault();
 
@@ -53,10 +53,11 @@ const Login: FC = () => {
             <a href="#" className="text-sm hover:text-indigo-500">Forgot password?</a>
           </div>
         </div>
-          <input className="mt-4 hover:bg-white/20 cursor-pointer rounded-lg bg-vinci hover:bg-vinci-hover text-lg py-4 text-white font-semibold" type="submit" value="Continue"/>
+        {/* this margin top is not changing */}
+          <input className="mt-6 hover:bg-white/20 cursor-pointer rounded-lg bg-vinci hover:bg-vinci-hover text-lg py-4 text-white font-semibold" type="submit" value="Continue"/>
         </form>
         <div className="h-px bg-stone-300 mt-8"> </div>
-        <div className="flex items-center justify-center mt-4">
+        <div className="flex items-center justify-center mt-3">
           <div className="flex items-center">
             <div className="ml-2 block text-lg text-stone-400">Don't have an account?</div>
           </div>
@@ -66,7 +67,7 @@ const Login: FC = () => {
           </div>
         </div>
         </div>
-        <div className="bg-white justify-self-center h-full w-full">
+        <div className="bg-white justify-self-center w-full h-fit">
         <img src="../../image_geometric.png" alt="3D geometric shapes" className="max-w-none"/>
       </div>
         </div>
