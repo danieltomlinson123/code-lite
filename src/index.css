@@ -12,10 +12,7 @@
   }
   .root {
     @apply h-full;
-    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Noto Sans JP', sans-serif; */
   }
 }
-
-/* .root {
-  font-size: 62.5%;
-} */
