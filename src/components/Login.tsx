@@ -13,15 +13,23 @@ const Login: FC = () => {
 
         <div className="justify-self-center w-full max-w-sm flex flex-col">
         <div className="flex align-start justify-center">
-          <h1 className="font-oakesMedium text-4xl text-black-600 font-semibold">VINCI</h1><span className="text-xs text-vinci-light ml-0.5 font-semibold">BETA</span>
+          <h1 className="font-oakesMedium text-4xl text-black-600 font-semibold">VINCI</h1><span className="font-oakesMedium text-xs text-vinci-light ml-0.5 font-semibold">BETA</span>
         </div>
         <form
           className="flex flex-col mt-12"
           onSubmit={async (e) => {
             e.preventDefault();
-
-            toast('Sign in successful 😁', { type: 'success' });
-            // toast('I am incomplete 😢', { type: 'error' });
+            try {
+              getUser(email, password).then(result => {
+                console.log(result)
+                if (!result) throw new Error("Sign in unsuccessful")
+                
+                toast(`Sign in for user ${result.email} successful 😁`, { type: 'success' });
+              })
+        
+            } catch (error) {
+              if (error) toast('Sign in unsuccessful 😢', { type: 'error' });
+            }
           }}
         >
           <input
@@ -53,8 +61,7 @@ const Login: FC = () => {
             <a href="#" className="text-sm hover:text-indigo-500">Forgot password?</a>
           </div>
         </div>
-        {/* this margin top is not changing */}
-          <input className="mt-6 hover:bg-white/20 cursor-pointer rounded-lg bg-vinci hover:bg-vinci-hover text-lg py-4 text-white font-semibold" type="submit" value="Continue"/>
+          <input className="font-oakesMedium mt-6 hover:bg-white/20 cursor-pointer rounded-lg bg-vinci hover:bg-vinci-hover text-lg py-4 text-white font-semibold" type="submit" value="Continue"/>
         </form>
         <div className="h-px bg-stone-300 mt-8"> </div>
         <div className="flex items-center justify-center mt-3">
