@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'OakesGrotesk';
+  src: local('OakesGrotesk'), url('./fonts/Oakes/Oakes-Grotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'OakesGroteskMedium';
+  src: local('OakesGroteskMedium'), url('./fonts/Oakes/Oakes-Grotesk-Medium.ttf') format('truetype');
+  font-weight: 600;
+}
 
 @layer base {
   html {
@@ -15,5 +26,10 @@
     /* font-family: 'Open Sans', sans-serif; */
     /* font-family: 'Noto Sans JP', sans-serif; */
     /* background-color: #7b4df9; */
+    @apply font-oakes;
   }
+
+  /* .font-face-og {
+    font-family: 'OakesGrotesk';
+  } */
 }

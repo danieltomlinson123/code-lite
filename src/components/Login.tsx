@@ -13,7 +13,7 @@ const Login: FC = () => {
 
         <div className="justify-self-center w-full max-w-sm flex flex-col">
         <div className="flex align-start justify-center">
-          <h1 className="text-4xl text-black-600 font-semibold">VINCI</h1><span className="text-xs text-vinci-light mt-1 ml-0.5 font-semibold">BETA</span>
+          <h1 className="font-oakesMedium text-4xl text-black-600 font-semibold">VINCI</h1><span className="text-xs text-vinci-light ml-0.5 font-semibold">BETA</span>
         </div>
         <form
           className="flex flex-col mt-12"

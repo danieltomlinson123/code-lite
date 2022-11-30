@@ -3,7 +3,8 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      sans: ['"Open Sans"', 'sans-serif']
+      // sans: ['"Open Sans"', 'sans-serif']
+      oakes: ['OakesGrotesk', 'sans-serif']
     },
     extend: {
       colors: {
@@ -13,7 +14,8 @@ module.exports = {
           hover: '#7b4df9'
           // dark: '#6d3af9'
         }
-      }
+      },
+      fontFamily: { oakesMedium: ['OakesGroteskMedium', 'sans-serif'] }
     }
   },
   plugins: []
